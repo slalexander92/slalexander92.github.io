@@ -1,12 +1,15 @@
 <template lang="pug">
   #application 
-    h1 hello world 
+    ContactForm
 </template>
 
 <script>
-
+import ContactForm from './components/ContactForm.vue';
 export default {
-  name: 'app'
+  name: 'app',
+  components:{
+    ContactForm
+  }
 }
 </script>
 
