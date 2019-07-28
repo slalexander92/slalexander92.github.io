@@ -1,6 +1,6 @@
 <template lang="pug">
   #contact-form
-    form(name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field")
+    form(name="contact" method="POST" data-netlify="true")
       p
         label Name 
           input(type="text" name="name")
