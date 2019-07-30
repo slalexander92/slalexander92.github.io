@@ -15,7 +15,7 @@
 <script>
 
 export default {
-  name: 'app'
+  name: 'ContactForm'
 }
 </script>
 
