@@ -1,8 +1,8 @@
 <template lang="pug">
   .navigation
     .navigation__img
-    .navigation__name Spencer Alexander
-    .navigation__title Software Engineer
+    h1.navigation__name Spencer Alexander
+    h2.navigation__title Software Engineer
     .navigation__list
       router-link.navigation__link(
         v-for='(link, i) in links', 
@@ -31,7 +31,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @import '../styles/DEFAULT';
 
   .navigation{
@@ -72,7 +72,8 @@ export default {
     }
 
     &__title{
-      text-align: center
+      text-align: center;
+      letter-spacing: 2px;
     }
 
     &__list{
@@ -83,11 +84,16 @@ export default {
     }
 
     &__link{
+      text-transform: uppercase;
+      font-family: 'Source Sans Pro', sans-serif;
       text-decoration:none;
-      color: $googleBlue;
+      color: black;
+      letter-spacing: 2px;
+      margin: 5px 0;
 
       &.active{
-        border-bottom: 1px solid $googleBlue;
+        border-bottom: 1px solid $googleBlue; 
+        color: $googleBlue;
       }
 
     }

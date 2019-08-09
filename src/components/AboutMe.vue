@@ -31,13 +31,17 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @import '../styles/DEFAULT.scss';
 
   .about-me{
     position: relative;
     width: 100%;
     height: 100vh;
+
+    .app__view--open & {
+      pointer-events: none;
+    }
 
     &__title-container{
       position: absolute;
@@ -53,7 +57,7 @@ export default {
     }
 
     hr{
-      width: 25%;
+      width: 100px;
       margin: auto;
       border: 1px solid $googleBlue;
     }
@@ -77,7 +81,7 @@ export default {
 
       &:hover{
         transform: translate(0, -2px);
-        border-bottom: 3px solid $googleBlue;
+        border-bottom: 3px solid #f3f5f9;
       }
 
       &--github{

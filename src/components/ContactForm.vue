@@ -21,10 +21,14 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../styles/DEFAULT.scss';
 
   .contact-form{
+
+    .app__view--open & {
+      pointer-events: none;
+    }
 
     form{
       position: absolute;
@@ -48,7 +52,7 @@ export default {
     }
 
     hr{
-      width: 25%;
+      width: 100px;
       margin: auto;
       border: 1px solid $googleBlue;
     }
