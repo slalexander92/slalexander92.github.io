@@ -1,9 +1,9 @@
 <template lang="pug">
   .app
-    Navigation(:class="{ 'navigation--open' : drawerOpen }")
+    Navigation(:class="{ 'navigation--open' : drawerOpen }" v-on:navClick="closeDrawer")
     .app__view(ref="body" @click.self="closeDrawer" :class="{ 'app__view--open' : drawerOpen }")
       .app__menu.material-icons(@click.self="toggleMenu") menu 
-      transition(appear)
+      transition(name="fade")
         router-view
 </template>
 
@@ -33,9 +33,25 @@ export default {
 </script>
 
 <style lang="scss">
+
+.fade-leave-active {
+  transition: all .5s ease;
+}
+
+.fade-enter-to, .fade-enter-active   {
+  transition: all .5s ease;
+  opacity: 1;
+}
+
+.fade-enter, .fade-leave, .fade-leave-to {
+  transition: all .5s ease;
+  opacity: 0;
+}
+
 .app{
   height: 100vh;
   width: 100vw;
+
   &__view{
     position: absolute;
     left: 40vh;
@@ -63,12 +79,13 @@ export default {
     font-size: 36px;
     transition: all .5s ease;
     opacity: 0;
+    pointer-events: none;
     z-index: 2;
     
     @media (max-width: 768px){
       opacity: 1;
+      pointer-events: all;
     }
   }
-
 }
 </style>

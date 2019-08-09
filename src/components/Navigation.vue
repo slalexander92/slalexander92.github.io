@@ -9,6 +9,7 @@
         :key='i' 
         :to='link.path', 
         v-html='link.name'
+        @click.native="navSelect"
         exact
       )
 
@@ -19,9 +20,14 @@ export default {
   name: 'Navigation',
   computed:{
     links(){
-      return this.$router.options.routes
+      return this.$router.options.routes;
     }
   },
+  methods:{
+    navSelect(){
+      this.$emit('navClick');
+    }
+  }
 }
 </script>
 
