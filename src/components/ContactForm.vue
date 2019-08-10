@@ -92,12 +92,6 @@ export default {
           }
         }
       }
-
-      button{
-      }
-
-
     }
-
   }
 </style>

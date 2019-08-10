@@ -7,7 +7,7 @@ node_modules
 .env.*.local
 .env
 
-*/vue.config.js
+# */vue.config.js
 
 # Log files
 npm-debug.log*
