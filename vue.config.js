@@ -2,5 +2,5 @@
 // const PrerenderSPAPlugin = require('prerender-spa-plugin')
 
 module.exports = {
-  publicPath: 'congenial-goggles',
+  // publicPath: 'congenial-goggles',
 }

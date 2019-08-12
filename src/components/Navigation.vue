@@ -49,7 +49,6 @@ export default {
       &__menu{
         right: 0;
       }
-
     }
 
     &--open{
@@ -95,11 +94,6 @@ export default {
         border-bottom: 1px solid $googleBlue; 
         color: $googleBlue;
       }
-
     }
-
-
-
-
   }
 </style>
