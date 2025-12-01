@@ -5,21 +5,21 @@
 	<main>
 		<div :class="$style.wrapper">
 			<div :class="$style.imageWrapper">
-				<img :class="$style.image" src="./assets/me.jpeg" alt="">
+				<img :class="$style.image" src="./assets/me.jpeg" alt="" fetchpriority="high">
 			</div>
 
 			<h1>hi, I'm spencer</h1>
 			<h2>I'm a Software Developer</h2>
 
 			<div :class="$style.iconRow">
-				<a :class="$style.iconWrapper" href="https://github.com/slalexander92">
+				<a :class="$style.iconWrapper" href="https://github.com/slalexander92" aria-label="github link">
 					<img :class="$style.icon" src="./assets/github.svg" alt="github logo">
 				</a>
-				<a :class="$style.iconWrapper" href="/spencer-resume.pdf" target="_blank" download>
+				<a :class="$style.iconWrapper" href="/spencer-resume.pdf" target="_blank" aria-label="resume download link" download>
 					<img :class="$style.icon" src="./assets/cv.svg" alt="">
 				</a>
-				<a :class="$style.iconWrapper" href="https://www.linkedin.com/in/spencer-alexander-8a888757">
-					<img :class="$style.icon" src="./assets/linkedin.svg" alt="github logo">
+				<a :class="$style.iconWrapper" href="https://www.linkedin.com/in/spencer-alexander-8a888757" aria-label="linkedin link">
+					<img :class="$style.icon" src="./assets/linkedin.svg" alt="linkedin logo">
 				</a>
 			</div>
 		</div>
